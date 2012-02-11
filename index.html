@@ -8,9 +8,28 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Your Page Title Here :)</title>
+	<title>Planit!</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
+
+	<?php
+
+	# connect to facebook
+	require_once("facebook.php");
+
+	$config = array();
+	$config[‘appId’] = '';
+	$config[‘secret’] = '';
+	$config[‘fileUpload’] = false;
+
+	$facebook = new Facebook($config);
+
+	# make facebook login link
+	$params = array(
+	  'redirect_uri' => 'http://hackathon-kmmurphy.dotcloud.com/index.php'
+	);
+	echo "<a href='".$facebook->getLoginUrl($params)."' />";
+	?>
 
 	<!-- Mobile Specific Metas
   ================================================== -->
