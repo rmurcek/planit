@@ -51,40 +51,18 @@
 		</div>
 		<div class="one-third column">
 		<div id="fb-root"></div>
-		  <script>
-			window.fbAsyncInit = function() {
-			  FB.init({
-				appId      : '319972581382826',
-				status     : true, 
-				cookie     : true,
-				xfbml      : true,
-				oauth      : true,
-			  });
-			};
-			(function(d){
-			   var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-			   js = d.createElement('script'); js.id = id; js.async = true;
-			   js.src = "http://connect.facebook.net/en_US/all.js";
-			   d.getElementsByTagName('head')[0].appendChild(js);
-			 }(document));
-		  </script>
-		</div>
-		 <div class="fb-login-button">Login with Facebook</div>
-		<div class="one-third column">
-			<iframe src="http://www.facebook.com/plugins/like.php?href=YOUR_URL"
-			scrolling="no" frameborder="0"
-			style="border:none; width:450px; height:80px"></iframe>
-		</div>
-		
+		<script type="text/javascript" src="./javascripts/fblogin.js"></script>
 
+		<div class="fb-login-button">Login with Facebook</div>
+		
 	</div><!-- container -->
 
 
 
 	<!-- JS
 	================================================== -->
-	<!--<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="javascripts/tabs.js"></script>-->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="javascripts/tabs.js"></script>
 
 <!-- End Document
 ================================================== -->
