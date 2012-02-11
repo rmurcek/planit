@@ -12,8 +12,8 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<?
-        # connect to facebook
+	<?php
+        // connect to facebook
         require_once("facebook.php");
 
         $config = array();
@@ -23,14 +23,13 @@
 
         $facebook = new Facebook($config);
 
-        # make facebook login link
-        $params = array("redirect_uri" => "http://hackathon-kmmurphy.dotcloud.com/index.php");
+        // make facebook login link
+        $params = array('redirect_uri' => 'http://hackathon-kmmurphy.dotcloud.com/index.php');
 
         $url = $facebook->getLoginUrl($params);
         echo $url;
-        # echo "<a href=\"".$url."\" />";
+        // echo "<a href=\"".$url."\" />";
    ?>
-
 
 	<!-- Mobile Specific Metas
   ================================================== -->
