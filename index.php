@@ -12,24 +12,23 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<?php
+	<?
+        # connect to facebook
+        require_once("facebook.php");
 
-	# connect to facebook
-	require_once("facebook.php");
+        $config = array();
+        $config['appId'] = '';
+        $config['secret'] = '';
+        $config['fileUpload'] = false;
 
-	$config = array();
-	$config[‘appId’] = '';
-	$config[‘secret’] = '';
-	$config[‘fileUpload’] = false;
+        $facebook = new Facebook($config);
 
-	$facebook = new Facebook($config);
-
-	# make facebook login link
-	$params = array(
-	  'redirect_uri' => 'http://hackathon-kmmurphy.dotcloud.com/index.php'
-	);
-	echo "<a href='".$facebook->getLoginUrl($params)."' />";
-	?>
+        # make facebook login link
+        $params = "http://hackathon-kmmurphy.dotcloud.com/index.php";
+        
+        $url = $facebook->getLoginUrl($params);
+	    echo "<a href=\"".$url."\" />";
+   ?>
 
 	<!-- Mobile Specific Metas
   ================================================== -->
