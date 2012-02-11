@@ -1,0 +1,31 @@
+
+/*** FORM ELEMENTS ****/
+
+form.ceform {
+	background-color: white;
+}
+
+form.ceform label {
+	font-family: "Myriad Pro", sans-serif;
+	font-weight: bold; 
+	font-size: 16px;
+	padding-bottom: 12px; 
+}
+
+form.ceform input {
+	background-color: #EDEDED;
+	outline: none;
+	width: 400px;
+}
+
+form.ceform input[type=textarea] {
+	background-color: #EDEDED;
+	outline: none;
+	width: 400px;
+}
+
+form.ceform input[type=submit] {
+	float:right;
+	margin-right: 300px;
+	width: 100px;
+}
